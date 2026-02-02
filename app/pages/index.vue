@@ -1,28 +1,16 @@
 <script setup lang="ts">
-import { useAuthStore } from '../stores/auth'
-const auth = useAuthStore()
+import InfoCard from '~/components/dashboard/InfoCard.vue'
 </script>
 
 <template>
-  <div class="cards">
-    <div class="card">Users<br><strong>120</strong></div>
-    <div class="card">Orders<br><strong>75</strong></div>
-    <div class="card">Sales<br><strong>$1,200</strong></div>
+  <div>
+    <h1 class="text-2xl font-semibold mb-6">Dashboard</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <InfoCard title="Users" value="120" />
+      <InfoCard title="Orders" value="75" />
+      <InfoCard title="Sales" value="$1,200" />
+      <InfoCard title="Errors" value="3" />
+    </div>
   </div>
 </template>
-
-<style scoped>
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-</style>
-
