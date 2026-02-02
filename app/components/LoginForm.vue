@@ -17,32 +17,39 @@ const updateField = (key: 'email' | 'password', value: string) => {
 </script>
 
 <template>
-  <div class="mx-auto flex w-full max-w-sm flex-col">
-    <h1 class="mt-8 text-2xl font-semibold text-gray-700">
-      Welcome back
-    </h1>
-    <p class="mt-2 text-sm text-gray-400">Please sign in below</p>
+  <div class="mx-auto w-full max-w-sm rounded-lg bg-white p-6 shadow">
+    <div class="text-center">
+      <h1 class="text-2xl font-semibold text-gray-700">
+        Welcome back
+      </h1>
+      <p class="mt-2 text-sm text-gray-400">
+        Please sign in below
+      </p>
+    </div>
 
-    <p class="mt-5 text-sm font-semibold text-gray-500">Email</p>
-    <input
-      class="mt-1 rounded border py-1 px-3 text-sm shadow"
-      :value="modelValue.email"
-      @input="updateField('email', $event.target.value)"
-    />
+    <div class="mt-6 flex flex-col">
+      <p class="text-sm font-semibold text-gray-500">Email</p>
+      <input
+        class="mt-1 rounded border py-2 px-3 text-sm shadow-sm"
+        :value="modelValue.email"
+        @input="updateField('email', ($event.target as HTMLInputElement).value)"
+      />
 
-    <p class="mt-5 text-sm font-semibold text-gray-500">Password</p>
-    <input
-      type="password"
-      class="mt-1 rounded border py-1 px-3 text-sm shadow"
-      :value="modelValue.password"
-      @input="updateField('password', $event.target.value)"
-    />
+      <p class="mt-4 text-sm font-semibold text-gray-500">Password</p>
+      <input
+        type="password"
+        class="mt-1 rounded border py-2 px-3 text-sm shadow-sm"
+        :value="modelValue.password"
+        @input="updateField('password', ($event.target as HTMLInputElement).value)"
+      />
 
-    <button
-      class="mt-5 rounded bg-indigo-400 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
-      @click="$emit('submit')"
-    >
-      Sign in
-    </button>
+      <button
+        class="mt-6 rounded bg-indigo-500 py-2 text-sm font-semibold text-white hover:bg-indigo-600"
+        @click="$emit('submit')"
+      >
+        Sign in
+      </button>
+    </div>
   </div>
 </template>
+
