@@ -23,8 +23,7 @@ defineProps<{
     </div>
 
     <NuxtLink
-      v-if="link"
-      :to="link"
+      :to="link || '#'"
       class="flex items-center justify-center gap-1 bg-black/10 py-2 text-sm hover:bg-black/20"
     >
       More info

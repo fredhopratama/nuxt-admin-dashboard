@@ -21,30 +21,32 @@ const options = {
   responsive: true,
   maintainAspectRatio: false,
   layout: {
-    padding: {
-      left: 12,
-      right: 12,
-      top: 8,
-      bottom: 12
+  padding: {
+    left: 16,
+    right: 12,
+    top: 8,
+    bottom: 12
     }
   },
   scales: {
-    x: {
-      grid: {
-        display: false
-      },
-      ticks: {
-        padding: 8
-      }
+  x: {
+    grid: {
+      display: false,
+      drawBorder: false
     },
-    y: {
-      grid: {
-        color: '#e5e7eb'
-      },
-      ticks: {
-        padding: 8
-      },
-      beginAtZero: true
+    ticks: {
+      padding: 10
+    }
+  },
+  y: {
+    grid: {
+      color: '#e5e7eb',
+      drawBorder: false
+    },
+    ticks: {
+      padding: 10
+    },
+    beginAtZero: true
     }
   }
 }
