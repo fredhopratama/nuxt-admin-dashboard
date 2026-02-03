@@ -1,37 +1,72 @@
-<template>
-  <aside class="sidebar">
-    <h2 class="logo">Admin</h2>
+<script setup lang="ts">
+import { useAuthStore } from '../stores/auth'
 
-    <nav>
-      <NuxtLink to="/">Dashboard</NuxtLink>
-      <NuxtLink to="/users">Customers</NuxtLink>
-      <NuxtLink to="/settings">Settings</NuxtLink>
+const auth = useAuthStore()
+</script>
+
+<template>
+  <aside class="flex h-screen w-[230px] flex-col bg-gray-800 text-gray-300">
+    <!-- Logo -->
+    <div class="flex items-center gap-2 border-b border-gray-700 px-4 py-4">
+      <img src="/favicon.ico" alt="Logo" class="h-8 w-8" />
+      <span class="text-lg font-semibold text-white">Admin Panel</span>
+    </div>
+
+    <!-- User info -->
+    <div class="border-b border-gray-700 px-4 py-4">
+      <p class="text-sm text-gray-400">Login sebagai</p>
+      <p class="mt-1 font-medium text-white">
+        {{ auth.user || 'Administrator' }}
+      </p>
+    </div>
+
+    <!-- Menu -->
+    <nav class="flex-1 px-2 py-4">
+      <NuxtLink
+        to="/"
+        class="menu-item"
+        exact-active-class="menu-active"
+      >
+        Dashboard
+      </NuxtLink>
+
+      <NuxtLink
+        to="/users"
+        class="menu-item"
+        exact-active-class="menu-active"
+      >
+        Customers
+      </NuxtLink>
+
+      <NuxtLink
+        to="/settings"
+        class="menu-item"
+        exact-active-class="menu-active"
+      >
+        Settings
+      </NuxtLink>
     </nav>
   </aside>
 </template>
 
-
 <style scoped>
-.sidebar {
-  width: 220px;
-  background: #343a40;
-  color: white;
-  padding: 20px;
-}
-
-.logo {
-  margin-bottom: 24px;
-  font-size: 18px;
-}
-
-nav a {
-  display: block;
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  border-radius: 4px;
   color: #c2c7d0;
-  text-decoration: none;
-  padding: 10px 0;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-nav a:hover {
-  color: white;
+.menu-item:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.menu-active {
+  background-color: #4f46e5;
+  color: #ffffff;
 }
 </style>
