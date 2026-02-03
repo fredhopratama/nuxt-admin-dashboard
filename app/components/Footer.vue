@@ -1,15 +1,19 @@
 <template>
   <footer class="footer">
-    © 2026 Admin Dashboard
+    <span>© 2026 Admin Dashboard</span>
+    <span>Version 1.0</span>
   </footer>
 </template>
 
 <style scoped>
 .footer {
-  text-align: center;
-  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
   font-size: 12px;
   color: #777;
   border-top: 1px solid #ddd;
+  background: #fff;
 }
 </style>
