@@ -10,9 +10,9 @@ Proyek ini difokuskan pada:
 
 ---
 
-## ✨ Fitur Saat Ini
+## Fitur Saat Ini
 
-- ✅ Halaman Login (custom UI, bukan template mentah)
+- ✅ Halaman Login
 - ✅ Dashboard dengan info cards dan chart
 - ✅ Tabel Users dengan:
   - Pagination UI
@@ -26,10 +26,10 @@ Proyek ini difokuskan pada:
 
 ---
 
-## 🎨 Referensi Desain
+## Referensi Desain
 
 UI dan UX **terinspirasi dari AdminLTE**  
-👉 https://adminlte.io/
+https://adminlte.io/
 
 Namun implementasi dilakukan ulang menggunakan:
 - Tailwind CSS
@@ -40,7 +40,7 @@ Tidak menggunakan AdminLTE secara langsung.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Nuxt 4**
 - **Vue 3 (Composition API)**
@@ -50,7 +50,7 @@ Tidak menggunakan AdminLTE secara langsung.
 
 ---
 
-## 🚀 Setup & Development
+## Setup & Development
 
 Install dependencies:
 
