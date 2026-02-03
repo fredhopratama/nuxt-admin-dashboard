@@ -1,75 +1,59 @@
-# Nuxt Minimal Starter
+# Nuxt Admin Dashboard
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Admin dashboard berbasis **Nuxt 4 + Tailwind CSS** yang dikembangkan sebagai **frontend-only dashboard** dengan pendekatan desain terinspirasi dari **AdminLTE**.
 
-## Setup
+Proyek ini difokuskan pada:
+- Struktur UI yang rapi dan konsisten
+- Komponen reusable
+- UX yang jelas untuk admin panel
+- Kesiapan untuk dikembangkan lebih lanjut (data real, API, auth, dsb)
 
-Make sure to install dependencies:
+---
+
+## ✨ Fitur Saat Ini
+
+- ✅ Halaman Login (custom UI, bukan template mentah)
+- ✅ Dashboard dengan info cards dan chart
+- ✅ Tabel Users dengan:
+  - Pagination UI
+  - Action button (edit / delete)
+  - Styling ala admin dashboard
+- ✅ Sidebar interaktif (hover state, active state, user info)
+- ✅ Layout terpisah (auth & default layout)
+- ✅ State management menggunakan Pinia
+
+> Catatan: Proyek ini **belum terhubung ke backend** dan menggunakan data statis/dummy untuk keperluan UI dan demonstrasi.
+
+---
+
+## 🎨 Referensi Desain
+
+UI dan UX **terinspirasi dari AdminLTE**  
+👉 https://adminlte.io/
+
+Namun implementasi dilakukan ulang menggunakan:
+- Tailwind CSS
+- Komponen Nuxt
+- Struktur modern Vue/Nuxt
+
+Tidak menggunakan AdminLTE secara langsung.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Nuxt 4**
+- **Vue 3 (Composition API)**
+- **Tailwind CSS**
+- **Pinia**
+- **TypeScript**
+
+---
+
+## 🚀 Setup & Development
+
+Install dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
