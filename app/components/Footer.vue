@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  font-size: 18px;
+  font-size: 14px;
   color: #777;
   border-top: 1px solid #ddd;
   background: #fff;

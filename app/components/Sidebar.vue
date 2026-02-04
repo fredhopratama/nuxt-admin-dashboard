@@ -37,7 +37,15 @@ const auth = useAuthStore()
       >
         Customers
       </NuxtLink>
-
+      
+      <NuxtLink
+        to="/calendar"
+        class="menu-item"
+        exact-active-class="menu-active"
+      >
+        Calendar
+      </NuxtLink>
+      
       <NuxtLink
         to="/settings"
         class="menu-item"
